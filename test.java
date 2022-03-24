@@ -1,28 +1,18 @@
+package ss3_array_function.bai_tap.dem_so_lan_xuat_hien_ky_tu_trong_chuoi;
+
 import java.util.Scanner;
 
 public class test {
-        public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Nhập số lượng số nguyên cần in");
-            int number = sc.nextInt();
-            int N = 2;
-            int count = 0;
-            int checkcount = 0;
-            while (count < number){
-                for (int i = 2; i < N; i++) {
-                    if (N % i == 0) {
-                        checkcount ++;
-                        break;
-                    }
+    public static void main(String[] args) {
+        int[] a = {1,9,3,2};
+        for(int i=0;i<a.length-1;i++){
+            for(int j=i+1;j<a.length;j++){
+                if(a[i] > a[j]){
+                    int x = a[i];
+                    a[i] = a[j];
+                    a[j] = x;
                 }
-                if (checkcount == 0){
-                    count++;
-                    System.out.println(N);
-                }
-                checkcount = 0;
-                N++;
-
             }
-
         }
     }
+}
