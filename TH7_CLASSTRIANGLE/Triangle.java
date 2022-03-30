@@ -43,6 +43,7 @@ public class Triangle extends Shape {
     public double getPerimeter() {
         return side1+side2+side3;
     }
+
     public double getSermiPerimeter() {
         return getPerimeter()/2;
     }
